@@ -15,7 +15,8 @@ function App(){
   }
   const [count,setCount]=useState(0);
   const [state,dispatch]=useReducer(countReducer,{count:0});
-  useEffect(()=>{
+ useEffect(()=>{
+    document.title=`useState count : ${count} | useReducer count : ${state.count}`
   },[count,state.count])
   return(
     <div>
